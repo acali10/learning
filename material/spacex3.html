@@ -12,13 +12,16 @@
         </nav>
         <hr>
     </header>
-
+<section>
     <h1>Hire Us Now</h1>
     <p>Leave a message to request one of our services and we will get back to you as soon as possible.</p>
-    <br><br>
-    <div>
+</section>
+<br><br>
+<section>
+    <form>
+       <div>
         <label for="name">Nome:</label>
-        <input type="text" id="name" name="nome"> - 
+        <input type="text" id="name" name="name"> - 
         <label for="email">Email:</label>
         <input type="email" name="email" id="email">
     </div>
@@ -26,15 +29,23 @@
     <div>
         <label for="spaceship">Spaceship:</label>
         <select name="spaceship" id="spaceship">
-            <option value="rfalcon_9">Falcon 9</option>
+            <option value="falcon_9">Falcon 9</option>
             <option value="falcon_heavy">Falcon Heavy</option>
         </select> | 
-        <label for="search">Type of Service</label>
-        <input type="search" id="search" name="search" autocomplete="on">
+        <label for="service">Type of Service</label>
+        <input type="search" id="service" name="service" list="services">
+        <datalist id="services">
+            <option value="Lorem ipsum dolor"></option>
+            <option value="Consectetur adipisicing elit"></option>
+            <option value="Culpa in, iste tenetur"></option>
+            <option value="Itaque cum veritatis"></option>
+        </datalist>
     </div>
     <br><br>
-    <input type="submit" value="Send Message">
-
-
+    <div>
+        <input type="submit" value="Send Message">
+    </div>
+</form>
+</section>
 </body>
 </html>
