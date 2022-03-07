@@ -3,5 +3,12 @@ li{
 }
 h1{
     color: purple;
-    font-size: 58;
+ border: 2px dashed orange
+}
+
+body{
+background-image: url(https://www.hardware.com.br/static/wp/2021/04/16/space-x-nasa.jpg?fm=pjpg&ixlib=php-3.3.0);
+background-repeat: no-repeat;
+background-size: cover;
+back
 }
