@@ -17,6 +17,7 @@
 
 .flex-item{
     background-color: #ff0044;
-    height: 200px;
+    flex-basis: 150px;
+    flex-grow: 1;
 }
 
