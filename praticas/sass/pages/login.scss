@@ -1,5 +1,5 @@
 .containter{
     p{
-        @include tex-style($btn-background, 22px, Arial);
+    @include tex-style(red, 22px, arial);
     }
 }
