@@ -7,7 +7,7 @@ let youngerPersonAge = prompt("Digite a idade da pessoa mais nova")
 let ageDifference = (olderPersonAge - youngerPersonAge)
 
 alert(
-  `Pessoa mais velha: ${olderPersonName}\nIdade: ${olderPersonAge}`
-  `\nPessoa mais nova: ${youngerPersonAge}\nIdade: ${youngerPersonAge}`
-  `\nDiferença de idade: ${ageDifference}`
+  `Pessoa mais velha: ${olderPersonName}\nIdade: ${olderPersonAge}
+  \nPessoa mais nova: ${youngerPersonAge}\nIdade: ${youngerPersonAge}
+  \nDiferença de idade: ${ageDifference}`
   )
