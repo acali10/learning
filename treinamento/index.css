@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header-top {
+  border: 1px solid red;
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 50px 25px;
+  gap: 20px;
+}
