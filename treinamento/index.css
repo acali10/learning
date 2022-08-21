@@ -99,7 +99,7 @@ header a {
   position: absolute;
   width: 100%;
   height: 200px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   z-index: 1;
 }
 
@@ -120,3 +120,5 @@ header a {
   background-color: var(--green);
   color: #fff;
 }
+
+
