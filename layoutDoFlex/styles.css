@@ -28,16 +28,15 @@
 }
 
 .item1{
-  order: 2;
-  align-self: flex-end;
+
 }
 
 .item2{
-  order: 3;
+
 }
 
 .item3{
-  order: 1;
+
 }
 
 @media (max-width:390px){
