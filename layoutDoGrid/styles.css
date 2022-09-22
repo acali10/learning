@@ -7,10 +7,16 @@
 .container{
   background-color: darkgrey;
   min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 10px;
+  grid-template-rows: minmax(210px, 240px);
 }
 
 .item{
   border: 2px solid black;
   background-color: white;
   font-size: 30px;
+  padding: 10px;
 }
+
