@@ -13,7 +13,7 @@ body {
 
 .container1 {
   background-color: rgba(19, 18, 18, 0.9450980392);
-  width: 450px;
+  width: 450px !important;
   height: auto;
 }
 
