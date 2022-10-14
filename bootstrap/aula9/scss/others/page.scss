@@ -13,8 +13,12 @@ body{
 
 .container1{
   background-color: $background-color;
-  width: 450px !important;
-  height: auto;
+  width: 450px;
+  height: auto; 
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .topLogo{
