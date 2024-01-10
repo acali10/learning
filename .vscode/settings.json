@@ -1,0 +1,7 @@
+{
+	"editor.insertSpaces": false,
+	"files.autoSave": "afterDelay",
+	"editor.tabSize": 1,
+	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+	"editor.detectIndentation": false
+}
