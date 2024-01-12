@@ -6,21 +6,27 @@
     <title>Exercício 5</title>
 </head>
 <body>
-    <form action="">
-
+    <form action="#" method="post">
+        <div>
         <label for="nome">Nome:</label><br>
-        <input type="text" name="nome" id="nome">
+        <input type="text" name="nome" id="nome" required>
         <br><br>
+        </div>
 
+        <div>
         <label for="email">E-mail:</label><br>
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email" required>
         <br><br>
+        </div>
 
+        <div>
         <label for="whatsapp">WhatsApp:</label><br>
-        <input type="text" name="whatsapp" id="whatsapp">
+        <input type="text" name="whatsapp" id="whatsapp" required>
         <br><br>
+        </div>
 
-        <label for="areaAtuacao">Área de atuaçã:</label><br>
+        <div>
+        <label for="areaAtuacao">Área de atuação:</label><br>
         <input type="radio" name="area" id="desenvolvimento">
         <label for="desenvolvimento">Desenvolvimento</label>
         <input type="radio" name="area" id="qa">
@@ -30,14 +36,18 @@
         <input type="radio" name="area" id="infraestrutura">
         <label for="infraestrutura">Infraestrutura</label>
         <br><br>
+        </div>
 
+        <div>
         <label for="obs">Observações:</label><br>
         <textarea name="sobre" id="sobre" cols="30" rows="5"></textarea>
         <br><br>
+        </div>
 
         <input type="checkbox" name="checkbox" id="checkbox">
         <label for="checkbox">Desejo receber novidades e ofertas por e-mail.</label><br>
         <br><br>
+
         <button type="submit">Enviar</button>
 
     </form>
