@@ -1,8 +1,8 @@
 {
-	"editor.insertSpaces": true,
-	"files.autoSave": "afterDelay",
-	"editor.tabSize": 4,
-	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-	"editor.detectIndentation": false,
-	"editor.wordWrap": "off"
+  "editor.insertSpaces": false,
+  "files.autoSave": "afterDelay",
+  "editor.tabSize": 4,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.detectIndentation": false,
+  "editor.wordWrap": "off"
 }
