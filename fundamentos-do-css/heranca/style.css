@@ -1,0 +1,26 @@
+body{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+	font-family: serif;
+}
+
+header{
+	background-color: #232323;
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+}
+
+.parent	{
+	
+	font-size: 1.25rem;
+	color: #f64348;
+
+}
+
+.child{
+	font-size: 2rem;
+	color: #00ff9f;
+}
