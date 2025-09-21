@@ -14,7 +14,7 @@ int main()
     scanf("%s", &nomeFilho);
     printf("Digite o sobrenome do pai: ");
     scanf("%s", &sobrenomePai);
-    printf("Digite o sobrenome da m�e: ");
+    printf("Digite o sobrenome da mãe: ");
     scanf("%s", &sobrenomeMae);
 
     printf("O nome completo do filho é %s %s %s", nomeFilho, sobrenomeMae, sobrenomePai);
