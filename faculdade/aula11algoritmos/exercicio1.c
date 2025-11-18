@@ -2,18 +2,16 @@
 #include <stdlib.h>
 #include <locale.h>
 
-int main(){
-
-	setlocale(LC_ALL, "Portuguese");
-
-	void troca (int *n1, int *n2){
+	void troca (int *n1, int *n2) {
 		int temp;
 		temp = *n1;
 		*n1 = *n2;
 		*n2 = temp;
 	}
-	
-	
+
+int main(){
+
+	setlocale(LC_ALL, "Portuguese");
 
 	//variáveis
 	int numero1, numero2;

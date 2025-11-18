@@ -4,5 +4,8 @@
   "editor.tabSize": 4,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.detectIndentation": false,
-  "editor.wordWrap": "off"
+"editor.wordWrap": "off",
+"files.associations": {
+	"string.h": "c"
+}
 }
