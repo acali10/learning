@@ -4,7 +4,7 @@
 
 void multiplicador(int *vetor, int tamanho){
 	for (int indice = 0; indice < tamanho; indice++) {
-		vetor[indice] = vetor [indice] * 2;
+		vetor[indice] *= 2;
 	}
 }
 
