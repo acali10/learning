@@ -21,8 +21,7 @@ int main()
     }
 
     // Leitura do Arquivo
-    fscanf(arquivo, "%s", &palavra);
-
+    fscanf(arquivo, "%s", &palavra); 
     // Saída para o Usuário
     printf("A palavra lida do arquivo é: %s", palavra);
 
