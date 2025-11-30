@@ -2,42 +2,62 @@
 #include <stdlib.h>
 #include <locale.h>
 
-void multiplicador(int *vetor, int tamanho){
-	for (int indice = 0; indice < tamanho; indice++) {
-		vetor[indice] = vetor [indice] * 2;
-	}
+// Bloco de Subprogramas
+void lerVetor(int vetor[], int max)
+{
+    // Variáveis Locais
+    int indice;
+
+    // Laço de Repetição
+    for (indice = 0; indice < max; indice++) {
+        printf("Digite um número para a posição %d do vetor: ", indice);
+        scanf("%d", &vetor[indice]);
+    }
 }
 
-int main(){
+void imprimirVetor(int vetor[], int max)
+{
+    // Variáveis Locais
+    int indice;
 
-	setlocale(LC_ALL, "Portuguese");
+    // Laço de Repetição
+    for (indice = 0; indice < max; indice++) {
+        printf("| %d ", vetor[indice]);
+    }
+    printf("|");
+}
 
-	//variáveis
-	int vetor[5];
+void dobraVetor(int *vetor)
+{
+    // Variáveis
+    int indice;
 
-	//entrada
-	printf("Digite 5 números inteiros:\n");
-	for (int indice = 0; indice < 5; indice++) {
-		printf("Número %d: ", indice + 1);
-		scanf("%d", &vetor[indice]);
-	}
+    // Laço de Repetição
+    for (indice = 0; indice < 5; indice++) {
+        vetor[indice] *= 2;
+    }
+}
 
-	//vetor original
-	printf("Vetor original:\n");
-	for (int indice = 0; indice < 5; indice++) {
-		printf("%d ", vetor[indice]);
-	}
+// Bloco Principal
+int main()
+{
+    // Idioma
+    setlocale(LC_ALL, "Portuguese");
 
-	//chamada subprograma
-	multiplicador(vetor, 5);
+    // Variáveis
+    int numeros[5];
 
-	//vetor modificado
-	printf("\nVetor após dobrado: ");
-	for (int indice = 0; indice < 5; indice++) {
-		printf("%d ", vetor[indice]);
-	}
+    // Entrada
+    lerVetor(numeros, 5);
 
-	return 0;
+    // Saída Antes do Subprograma
+    printf("\n----- Antes -----\n");
+    imprimirVetor(numeros, 5);
 
+    // Subprograma com Ponteiros
+    dobraVetor(&numeros);
 
-}	
+    // Saída Depois do Subprograma
+    printf("\n----- Depois -----\n");
+    imprimirVetor(numeros, 5);
+}

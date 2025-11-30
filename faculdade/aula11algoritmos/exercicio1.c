@@ -2,28 +2,40 @@
 #include <stdlib.h>
 #include <locale.h>
 
-	void troca (int *n1, int *n2) {
-		int temp;
-		temp = *n1;
-		*n1 = *n2;
-		*n2 = temp;
-	}
+// Bloco de Subprogramas
+void troca(int *num1, int *num2)
+{
+    // Variáveis
+    int temp;
 
-int main(){
+    // Troca dos Numeros
+    temp = *num1;
+    *num1 = *num2;
+    *num2 = temp;
+}
 
-	setlocale(LC_ALL, "Portuguese");
+// Bloco Principal
+int main()
+{
+    // Idioma
+    setlocale(LC_ALL, "Portuguese");
 
-	//variáveis
-	int numero1, numero2;
+    // Variáveis
+    int numero1, numero2;
 
-	//entrada
-	scanf("%d", &numero1);
-	scanf("%d", &numero2);
+    // Entrada
+    printf("----- Troca de Números -----\n");
+    printf("Digite o 1º número: ");
+    scanf("%d", &numero1);
+    printf("Digite o 2º número: ");
+    scanf("%d", &numero2);
 
-	//saída
-	printf("%d %d", numero1, numero2);
+    // Saída Antes da Troca
+    printf("\n--- Antes ---\n1º número: %d\n2º número: %d\n", numero1, numero2);
 
-	troca (&numero1, &numero2);
+    // Subprograma com Ponteiros
+    troca(&numero1, &numero2);
 
-	printf("\n%d %d", numero1, numero2);
+    // Saída Depois da Troca
+    printf("\n--- Depois ---\n1º número: %d\n2º número: %d\n", numero1, numero2);
 }
