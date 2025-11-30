@@ -19,9 +19,9 @@ int main()
         do {
             scanf("%d", &vetornumeros[indice]);
 
-            // Condicional para Mensagem ao Usu�rio
+            // Condicional para Mensagem ao Usuário
             if ((vetornumeros[indice] < 1) || (vetornumeros[indice] > 50)) {
-                printf("Número inválido! Digite novamente o %d� n�mero: ", indice+1);
+                printf("Número inválido! Digite novamente o %d� número: ", indice+1);
             }
 
         } while ((vetornumeros[indice] < 1) || (vetornumeros[indice] > 50));
