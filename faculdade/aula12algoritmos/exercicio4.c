@@ -2,10 +2,57 @@
 #include <stdlib.h>
 #include <locale.h>
 
+// Variável Global
+FILE *arquivo;
+
 // Bloco de Subprogramas
+void lerSensores(int *vetor)
+{
+    // Variáveis
+    int contador;
+
+    // Abertura do Arquivo para Leitura
+    arquivo = fopen("sensores.txt", "r");
+
+    // Validção do Arquivo
+    if (arquivo == NULL) {
+        return 1;
+    }
+
+    // Leitura do Arquivo
+    for (contador = 0; contador < 5; contador++) {
+        fscanf(arquivo, "%d", &vetor[contador]);
+    }
+
+    // Fechamento do Arquivo
+    fclose(arquivo);
+}
+
+void gravarSensores(int *vetor)
+{
+    // Variáveis
+    int contador;
+
+    // Abertura do Arquivo para Gravação
+    arquivo = fopen("sensores.txt", "w");
+
+    // Validação do Arquivo
+    if (arquivo == NULL) {
+        return 1;
+    }
+
+    // Escrita do Arquivo
+    for (contador = 0; contador < 5; contador++) {
+        fprintf(arquivo, "%d\n", vetor[contador]);
+    }
+
+    // Fechamento do Arquivo
+    fclose(arquivo);
+}
+
 void exibirSensores(int *vetor)
 {
-    // Varivéis
+    // Variáveis
     int contador;
 
     // Laço de Repetição
@@ -29,13 +76,11 @@ int main()
     // Idioma
     setlocale(LC_ALL, "Portuguese");
 
-    // Varivéis
+    // Variáveis
     int sensores[5], sensornumero, menu, contador;
 
-    // Inicialização do Vetor
-    for (contador = 0; contador < 5; contador++) {
-        sensores[contador] = 0;
-    }
+    // Leitura dos Sensores
+    lerSensores(&sensores);
 
     // Entrada com Laço de Repetição
     do {
@@ -65,4 +110,7 @@ int main()
         }
 
     } while (menu != 2);
+
+    // Gravação dos Sensores
+    gravarSensores(&sensores);
 }

@@ -1,23 +1,31 @@
 #include <stdio.h>
-#include <stdlib.h>	
+#include <stdlib.h>
 #include <locale.h>
 
-int main (){
+int main()
+{
+    // Idioma
+    setlocale(LC_ALL, "Portuguese");
 
-	setlocale(LC_ALL, "Portuguese");
+    // Variáveis
+    FILE *arquivo;
+    char palavra[50];
 
-	//variáveis
-	char palavra[100];
-	FILE *arquivo;
+    // Entrada do Usuário
+    printf("Digite uma palavra: ");
+    scanf("%s", &palavra);
 
-	//leitura da palavra
-	scanf("%s", palavra);
+    // Abertura do Arquivo
+    arquivo = fopen("arquivo.txt", "w");
 
-	//escrevendo em arquivo
-	arquivo = fopen("arq.txt", "w");
-	fprintf(arquivo, "%s", palavra);
-	fclose(arquivo);
+    // Validação do Arquivo
+    if (arquivo == NULL) {
+        return 1;
+    }
 
+    // Escrita do Arquivo
+    fprintf(arquivo, "%s", palavra);
 
-	return 0;
+    // Fechamento do Arquivo
+    fclose(arquivo);
 }

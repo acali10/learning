@@ -7,13 +7,13 @@ int main()
     // Idioma
     setlocale(LC_ALL, "Portuguese");
 
-    // Vari�veis
+    // Variáveis
     int vetornumeros[10], indice;
 
     // Entrada do Vetor por Laço de Repetição
     printf("----- VETOR DE 10 NÚMEROS -----\n");
     for (indice = 0; indice < 10; indice++) {
-        printf("Digite o n�mero para a posiçãoo %d do vetor: ", indice);
+        printf("Digite o número para a posição %d do vetor: ", indice);
         scanf("%d", &vetornumeros[indice]);
     }
 
