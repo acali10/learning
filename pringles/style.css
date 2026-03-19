@@ -19,6 +19,7 @@ header{
 	align-items: center;
 	padding: 20px 4vw;
 	z-index: 99;
+	cursor: pointer;
 
 	ul{
 		display: flex;
@@ -82,7 +83,7 @@ button{
 
 		.conteudo{
 			h2{
-				font-size: 5vw;
+				font-size: 4vw;
 			}
 
 			p{
@@ -140,6 +141,7 @@ button{
 			button{
 				transform: translateY(0px);
 				transition: opacity 0.5s 0.5s, transform 0.5s 0.5s;
+				cursor: pointer;
 			}
 
 			.imgCirculo{
