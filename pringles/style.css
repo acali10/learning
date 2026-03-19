@@ -150,10 +150,6 @@ button{
 	}
 }
 
-.slide:not(.ativo) {
-    z-index: 1;
-    transition: clip-path 1s, opacity 0.5s 0.5s; 
-}
 
 .slide:nth-child(2){
 	background: linear-gradient(100deg, #FF849D 2.57%, #C5566A 95.91%);
