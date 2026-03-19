@@ -67,16 +67,16 @@ button{
 		opacity: 0;
 		clip-path: circle(0% at 89% 50%);
 		z-index: 1;
-		transition: opacity 0.1s, 1s, clip-path 0.1s, 1s;
+		transition: opacity 0.1s 1s, clip-path 0.1s 1s;
 
 		.imgCirculo{
-			transform: rotate(-50deg);
+			transform: rotate(-10deg);
 			transition: transform .5s;
 		}
 
 
 		.imgCirculo{
-			margin-left: -20%;
+			margin-left: -15%;
 			width: 40vw;
 		}
 
@@ -130,20 +130,20 @@ button{
 			}
 
 			h2{
-				transition: opacity 0.5s, 0.5s;
+				transition: opacity 0.5s 0.3s;
 			}
 
 			p{
-				transition: opacity 0.5s, 0.5s;
+				transition: opacity 0.5s 0.3s;
 			}
 
 			button{
 				transform: translateY(0px);
-				transition: opacity 0.5s, 1s, transform 0.5s, 1s;
+				transition: opacity 0.5s 0.5s, transform 0.5s 0.5s;
 			}
 
 			.imgCirculo{
-				transform: rotate(50deg);
+				transform: rotate(10deg);
 				transition: transform 1s;
 			}
 
