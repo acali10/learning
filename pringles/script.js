@@ -22,12 +22,12 @@ latasMenores.forEach(lataMenor => {
 	}
 });
 
-const slipt = SplitText.create(".conteudo h2", {
+const split = SplitText.create(".conteudo h2", {
 	type: "chars",
 	mask: "chars"
 });
 
-gsap.from(slipt.chars, {
+gsap.from(split.chars, {
 	y: 80,
 	stagger: .1,
 });
