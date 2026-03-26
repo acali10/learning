@@ -6,152 +6,160 @@
 	box-sizing: border-box;
 }
 
-body{
-	color: #fff;
-	font-family: "Poppins", sans-serif;
+body {
+  color: white;
+  background-color: #7c7c7c;
+  font-family: "Poppins", sans-serif;
 }
 
-header{
-	width: 100%;
-	position: absolute;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px 4vw;
-	z-index: 99;
-	cursor: pointer;
+header {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 4vw;
+  z-index: 99;
 
-	ul{
-		display: flex;
-		gap: 20px;
-		list-style: none;
-	}
+  ul {
+    display: flex;
+    gap: 32px;
+    list-style-type: none;
+  }
 
-	.icones{
-		width: 389px;
-		display: flex;
-		justify-content: end;
-		gap: 20px;
-	}
-
+  .icones {
+    width: 389px;
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+  }
 }
 
-button{
-	font-size: 16px;
-	padding: 16px;
-	background-color: rgba(255, 255, 255, 0.9);
-	border-radius: 4px;
-	border: none;
-	font-family: "Poppins", sans-serif;
+button {
+  font-size: 16px;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 4px;
+  font-family: "Poppins", sans-serif;
 }
 
-.slider{
-	width: 100%;
-	height: 100vh;
-	display: flex;
+.slider {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
 
+  .logoFundo{
+    position: absolute;
+    z-index: 3;
+    right: -12%;
+    bottom: -22%;
+    width: 50vw;
+    mix-blend-mode: color-dodge;
+  }
 
-	.slide{
-		width: 100%;
-		height: 100%;
-		position: absolute;
+  .slide {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(100deg, #2ac4ff 2.57%, #0d88bb 95.91%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    padding: 4vw 4vw 4vw 0;
+    position: absolute;
+    transition:
+      opacity 0.1s 1s,
+      clip-path 0.1s 1s;
+    clip-path: circle(0% at 89% 50%);
+    opacity: 0;
+    z-index: 1;
 
-		background: linear-gradient(100deg, #2AC4FF 2.57%, #0D88BB 95.91%);
+    .imgCirculo{
+        transform: rotate(-50deg);
+        transition: transform .5s;
+    }
 
-		display: flex;
-		justify-content: center;
-		align-items: center;
+    .imgCirculo {
+      margin-left: -20%;
+      width: 40vw;
+    }
 
-		gap: 4vw;
-		padding: 4vw 4vw 4vw 0;
+    .conteudo {
+      h2 {
+        font-size: 5vw;
+      }
 
-		opacity: 0;
-		clip-path: circle(0% at 89% 50%);
-		z-index: 1;
-		transition: opacity 0.1s 1s, clip-path 0.1s 1s;
+      p {
+        width: 80%;
+        margin-bottom: clamp(24px, 2vw, 40px);
+        font-size: clamp(14px, 1vw, 20px);
+      }
 
-		.imgCirculo{
-			transform: rotate(-10deg);
-			transition: transform .5s;
-		}
+      h2,
+      p,
+      button {
+        opacity: 0;
+        transition: all 0.5s 1s;
+      }
+      button {
+        transform: translateY(20px);
+      }
+    }
 
+    .latas {
+      position: relative;
+      z-index: 4;
+      display: flex;
 
-		.imgCirculo{
-			margin-left: -15%;
-			width: 40vw;
-		}
+      img {
+        width: 14vw;
+      }
 
-		.conteudo{
-			h2{
-				font-size: 4vw;
-			}
+      img:nth-child(2) {
+        scale: 0.8;
+        cursor: pointer;
+        transition: scale .3s;
 
-			p{
-				width: 80%;
-				margin-bottom: clamp(24px, 2vw, 40px);
-				font-size: clamp(14px, 1vw, 20px);
-				
-			}
+        &:hover{
+          scale: .82
+        }
+      }
+    }
+  }
 
-			h2, p, button{
-				opacity: 0;
-				transition: all 0.5s, 1s;
-			}
+  .slide.ativo {
+    opacity: 1;
+    clip-path: circle(140vw at 89% 50%);
+    transition:
+      opacity 0.1s,
+      clip-path 1s;
+    z-index: 2;
 
-			button{
-				transform: translateY(20px);
-			}
+    h2, p, button{
+        opacity: 1;
+    }
 
-		}
+    .imgCirculo{
+        transform: rotate(50deg);
+        transition: transform 1s;
+    }
 
-		.latas{
-			display: flex;
+    h2{
+      transition: opacity 0.5s 0.5s;
+    }
 
-			img{
-				width: 14vw;
-			}
+    p{
+        transition: opacity 0.5s 0.8s;
+    }
 
-			img:nth-child(2){
-				scale: .8;
-				cursor: pointer;
-
-			}
-		}
-	}
-
-	.slide.ativo{
-		opacity: 1;
-		z-index: 2;
-		clip-path: circle(150% at 89% 50%);
-		transition: opacity 0.1s, clip-path 0.1s;
-		
-
-			h2, p, button{
-				opacity: 1;
-			}
-
-			h2{
-				transition: opacity 0.5s 0.3s;
-			}
-
-			p{
-				transition: opacity 0.5s 0.3s;
-			}
-
-			button{
-				transform: translateY(0px);
-				transition: opacity 0.5s 0.5s, transform 0.5s 0.5s;
-				cursor: pointer;
-			}
-
-			.imgCirculo{
-				transform: rotate(10deg);
-				transition: transform 1s;
-			}
-
-	}
-}
-
+    button {
+      transform: translateY(0px);
+      transition: opacity 0.5s 1s, transform .5s 1s;
+    }
+  }
 
 .slide:nth-child(2){
 	background: linear-gradient(100deg, #FF849D 2.57%, #C5566A 95.91%);
@@ -165,3 +173,4 @@ button{
 	background: linear-gradient(100deg, #008E5E 2.57%, #005235 95.91%);
 }
 
+}

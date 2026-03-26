@@ -6,28 +6,41 @@ const slides = document.querySelectorAll(".slide");
 
 let contador = 0;
 
+let clicar = true;
+
 latasMenores.forEach(lataMenor => {
 	lataMenor.onclick = () => {
-		const slideAtivo = document.querySelector(".slide.ativo");
-		slideAtivo.classList.remove("ativo");
+		if (clicar) {
+			clicar = false;
+			const slideAtivo = document.querySelector(".slide.ativo");
+			slideAtivo.classList.remove("ativo");
+			if (contador == 3) {
+				contador = 0;
+			} else {
+				contador = contador + 1;
+			}
 
-		if (contador == 3){
-			contador = 0;
-		}else{
-			contador = contador + 1;
+			slides[contador].classList.add("ativo");
+			animarTitulo();
+
+			setTimeout(() => {
+				clicar = true;
+			 }, 1000)
 		}
-
-
-		slides[contador].classList.add("ativo");
 	}
 });
 
-const split = SplitText.create(".conteudo h2", {
-	type: "chars",
-	mask: "chars"
-});
+function animarTitulo() {
+	const split = SplitText.create(".slide.ativo h2", {
+		type: "chars",
+		mask: "chars"
+	});
 
-gsap.from(split.chars, {
-	y: 80,
-	stagger: .1,
-});
+	gsap.from(split.chars, {
+		y: "100%",
+		duration: .5,
+		stagger: 0.06,
+		delay: .5,
+	});
+}
+
