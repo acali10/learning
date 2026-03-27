@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+}
+
+:root{
+	--whiteTitle: rgba(255, 255, 255, 0.9);
+	--whiteText: rgba(255, 255, 255, 0.8);
+	--blackTitle: #1b1d1f
+}
+
+body{
+	background-color: antiquewhite;
+	color: var(--whiteTitle);
+}
+
+Button{
+	font-size: .8vw;
+	width: 11vw;
+	height: 3vw;
+	border-radius: 200px;
+	font-weight: 500;
+	letter-spacing: .1vw;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+p{
+	color: var(--whiteText);
+	font-size: 1vw;
+	line-height: 1.5vw; 
+}
+
+.container{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	width: 100%;
+	padding: 2% 4%;
+	z-index: 999;
+}
+
+.headerLogo, .headerIcons{
+	flex: 1;
+}
+
+.headerLogo img{
+	width: 12%;
+}
+
+.headerIcons{
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	gap: 2%;
+}
+
+.headerIcons img:first-child{
+	width: 4%;
+}
+
+.headerIcons img:nth-child(2){
+	width: 5.6%;
+	margin-top: -1.4%;
+}
+
+.headerIcons img:nth-child(3){
+	width: 9%;
+	opacity: .8;
+	margin-left: 2%;
+}
+
+.slider{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.slide{
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	padding: 0 8%;
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	transition: all .3s ease;
+}
+
+.slide.active{
+	z-index: 2;
+	opacity: 1;
+}
+
+.slide:nth-child(1){
+	background-image: url("assets/lula.jpg");
+}
+
+.slide:nth-child(2){
+	background-image: url("assets/urso-polar.jpg");
+}
+
+.slide:nth-child(3){
+	background-image: url("assets/pinguin.jpg");
+}
+
+.slide:nth-child(4){
+	background-image: url("assets/tubarao.jpg");
+}
+
+.slideContent{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+
+	h2{
+		font-size: 4.11vw;
+		font-weight: 800;
+		width: 100%;
+	}
+
+	p{
+		padding-bottom: 1.8vw;
+		width: 72%;
+	}
+}
+
+.slideContent h2:nth-child(2){
+	font-size: 1.6vw;
+	font-weight: 700;
+	text-align: right;
+	padding-right: 8px;
+}
+
+.divButton{
+	display: flex;
+	gap: 4%;
+}
+
+.primaryButton{
+	background-color: var(--whiteText);
+	color: var(--blackTitle);
+}
+
+.secondaryButton{
+	background-color: transparent;
+	border: 2px solid var(--whiteText);
+	color: var(--whiteText);
+}
+
+.navigation{
+	position: absolute;
+	bottom: 8%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 4%;
+	z-index: 10;
+}
+
+.bullets{
+	display: flex;
+	gap: 1.2%;
+	width: 50%;
+}
+
+.bullets li{
+	list-style-type: none;
+	content: "";
+	width: 1.4vw;
+	height: .3vw;
+	background-color: var(--whiteText);
+	border-radius: 200px;
+	opacity: .5;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+
+.bullets li.active{
+	opacity: 1;
+}
+
+.bullets li:hover:not(li.active){
+	opacity: .8;
+}
+
+.navButtons{
+	display: flex;
+	gap: 2%;
+	width: 50%;
+	display: flex;
+	justify-content: end;
+}
+
+.navButtons button{
+	width: 3vw;
+	height: 3vw;
+}
